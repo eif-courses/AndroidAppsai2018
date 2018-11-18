@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools" app:startDestination="@id/home2">
+    <fragment android:id="@+id/detailsFragment3" android:name="com.example.viko.appsas.single.activity.DetailsFragment"
+              android:label="fragment_details" tools:layout="@layout/fragment_details">
+        <action android:id="@+id/back_home_action" app:destination="@id/home2"/>
+    </fragment>
+    <fragment android:id="@+id/home2" android:name="com.example.viko.appsas.single.activity.Home"
+              android:label="fragment_home" tools:layout="@layout/fragment_home">
+        <action android:id="@+id/shop_action" app:destination="@+id/shopFragment"/>
+    </fragment>
+    <fragment android:id="@+id/shopFragment" android:name="com.example.viko.appsas.single.activity.ShopFragment"
+              android:label="fragment_shop" tools:layout="@layout/fragment_shop">
+        <action android:id="@+id/details_action" app:destination="@id/detailsFragment3"/>
+        <action android:id="@+id/home_action" app:destination="@id/home2"/>
+        <argument android:name="item_name" app:argType="string" android:defaultValue="empty"/>
+    </fragment>
+</navigation>
